@@ -27,62 +27,6 @@ if ! bashio::fs.file_exists '/etc/snapserver.conf'; then
 fi
 bashio::log.info "Populating snapserver.conf..."
 
-echo "[stream]" > "${config}"
-# Streams
-streams=$(bashio::config 'streams')
-echo "${streams}" >> "${config}"
-
-# Stream bis and ter
-if bashio::config.has_value 'stream_bis'; then
-    stream_bis=$(bashio::config 'stream_bis')
-    echo "${stream_bis}" >> "${config}"
-fi
-if bashio::config.has_value 'stream_ter'; then
-    stream_ter=$(bashio::config 'stream_ter')
-    echo "${stream_ter}" >> "${config}"
-fi
-
-
-# Codec
-codec=$(bashio::config 'codec')
-echo "codec = ${codec}" >> "${config}"
-bashio::log.info "${codec}"
-
-# Buffer
-buffer=$(bashio::config 'buffer')
-echo "buffer = ${buffer}" >> "${config}"
-bashio::log.info "${buffer}"
-
-# Muted
-muted=$(bashio::config 'send_to_muted')
-echo "send_to_muted = = ${muted}" >> "${config}"
-# Sampleformat
-sampleformat=$(bashio::config 'sampleformat')
-echo "sampleformat = ${sampleformat}" >> "${config}"
-
-# Http
-http=$(bashio::config 'http_enabled')
-echo "[http]" >> "${config}"
-echo "enabled = ${http}" >> "${config}"
-echo "bind_to_address = ::" >> "${config}"
-# Datadir
-datadir=$(bashio::config 'server_datadir')
-echo "doc_root = ${datadir}" >> "${config}"
-# TCP
-
-echo "[tcp]" >> "${config}"
-tcp=$(bashio::config 'tcp_enabled')
-echo "enabled = ${tcp}" >> "${config}"
-
-# Logging
-echo "[logging]" >> "${config}"
-logging=$(bashio::config 'logging_enabled')
-echo "debug = ${logging}" >> "${config}"
-
-# Threads
-echo "[server]" >> "${config}"
-threads=$(bashio::config 'server_threads')
-echo "threads = ${threads}" >> "${config}"
 
 bashio::log.info "Starting SnapServer..."
 
