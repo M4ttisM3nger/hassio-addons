@@ -59,6 +59,8 @@ bashio::log.info "Populating snapserver.conf..."
     echo "[logging]"
     echo "debug = ${logging}"
     
+   } >> "${config}"
+    
 
 # Stream bis and ter
 #if bashio::config.has_value 'stream_bis'; then
