@@ -84,8 +84,15 @@ echo "[server]" >> "${config}"
 threads=$(bashio::config 'server_threads')
 echo "threads = ${threads}" >> "${config}"
 
-bashio::log.info ${test}
-bashio::log.info ${config}
+bashio::log.info "USRBIN"
+
+for i in $(cat $test); do
+    bashio::log.info "${i}"
+done
+bashio::log.info "ETC"
+for i in $(cat $config); do
+    bashio::log.info "${i}"
+done
 
 
 bashio::log.info "Starting SnapServer..."
