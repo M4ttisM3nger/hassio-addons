@@ -15,6 +15,9 @@ declare tcp
 declare logging
 declare threads
 declare datadir
+declare test
+
+test=/usr/bin/snapserver
 
 config=/etc/snapserver.conf
 
@@ -80,6 +83,10 @@ echo "debug = ${logging}" >> "${config}"
 echo "[server]" >> "${config}"
 threads=$(bashio::config 'server_threads')
 echo "threads = ${threads}" >> "${config}"
+
+bashio::log.info ${test}
+bashio::log.info ${config}
+
 
 bashio::log.info "Starting SnapServer..."
 
