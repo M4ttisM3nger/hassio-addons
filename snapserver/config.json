@@ -33,7 +33,7 @@
   "schema": {
     "stream": {
         "streams": ["str"],
-        "buffer": "int",
+        "buffer": "str",
         "codec": "str",
         "send_to_muted": "str",
         "sampleformat": "str"
