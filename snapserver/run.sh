@@ -59,7 +59,7 @@ bashio::log.info "Populating snapserver.conf..."
     echo "[logging]"
     echo "debug = ${logging}"
     
-   } >> "${config}"
+   } > "${config}"
     
 
 # Stream bis and ter
