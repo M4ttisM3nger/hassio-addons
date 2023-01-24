@@ -31,4 +31,4 @@ bashio::log.info "Populating snapserver.conf..."
 bashio::log.info "Starting SnapServer..."
 
 
-#/usr/bin/snapserver -c /etc/snapserver.conf
+/usr/bin/snapserver #-c /etc/snapserver.conf
