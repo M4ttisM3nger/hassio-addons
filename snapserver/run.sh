@@ -39,12 +39,15 @@ if bashio::config.has_value 'stream_ter'; then
     echo "${stream_ter}" >> "${config}"
 fi
 
-# Buffer
-buffer=$(bashio::config 'buffer')
-echo "buffer = ${buffer}" >> "${config}"
+
 # Codec
 codec=$(bashio::config 'codec')
 echo "codec = ${codec}" >> "${config}"
+
+# Buffer
+buffer=$(bashio::config 'buffer')
+echo "buffer = ${buffer}" >> "${config}"
+
 # Muted
 muted=$(bashio::config 'send_to_muted')
 echo "send_to_muted = = ${muted}" >> "${config}"
