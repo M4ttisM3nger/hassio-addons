@@ -16,7 +16,7 @@ audio: true
 init: false
 options:
   streams: "source = spotify:///librespot?name=Spotify&bitrate=320"
-  buffer: 1000
+  buffer: "1000"
   codec: "flac"
   send_to_muted: "false"
   sampleformat: "48000:16:2"
