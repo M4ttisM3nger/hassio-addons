@@ -81,4 +81,5 @@ echo "threads = ${threads}" >> "${config}"
 
 bashio::log.info "Starting SnapServer..."
 
+bashio::log.info /etc/snapserver.conf
 /usr/bin/snapserver -c /etc/snapserver.conf
