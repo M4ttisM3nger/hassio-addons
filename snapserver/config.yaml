@@ -16,11 +16,11 @@ audio: true
 init: false
 options:
   streams:
-    - source = alsa:///?name=haaudi&device=default
+    - source = alsa:///?name=haaudio&device=alsa_output.platform-bcm2835_audio.stereo-fallback.monitor
   buffer: 1000
   codec: flac
   send_to_muted: false
-  sampleformat: 48000:16:2
+  sampleformat: 44100:16:2
   http_enabled: true
   tcp_enabled: true
   logging_enabled: true
