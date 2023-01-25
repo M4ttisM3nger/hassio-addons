@@ -16,7 +16,7 @@ declare logging
 declare threads
 declare datadir
 
-config=/etc/snapserver.conf
+CONFIG=/etc/snapserver.conf
 
 threads=$(bashio::config 'server_threads')
 streams=$(bashio::config 'streams|join(", ")')
@@ -50,7 +50,7 @@ bashio::log.info "Populating snapserver.conf..."
 
     echo "[http]"
     echo "enabled = ${http}"
-    echo "bind_to_address = ::"
+    echo "bind_to_address = 0:0:0:0"
     echo "doc_root = ${datadir}"
     
     echo "[tcp]"
@@ -59,7 +59,7 @@ bashio::log.info "Populating snapserver.conf..."
     echo "[logging]"
     echo "debug = ${logging}"
     
-   } > "${config}"
+   } > "${CONFIG}"
     
 
 # Stream bis and ter
@@ -72,7 +72,7 @@ bashio::log.info "Populating snapserver.conf..."
 #    echo "${stream_ter}" >> "${config}"
 #fi
 
-cat ${config}
+cat ${CONFIG}
 bashio::log.info "Starting SnapServer..."
 
 /usr/bin/snapserver -c /etc/snapserver.conf
