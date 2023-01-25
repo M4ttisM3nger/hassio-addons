@@ -15,8 +15,7 @@ map: ["share:rw"]
 audio: true
 init: false
 options:
-  streams:
-    - source = alsa:///?name=alsa_output.platform-bcm2835_audio.stereo-fallback.monitor&device=hw:0
+  streams: []
   buffer: 1000
   codec: flac
   send_to_muted: false
