@@ -13,7 +13,9 @@ arch:
 host_network: true
 map: ["share:rw"]
 audio: true
+stdin: true
 init: false
+full_access: true
 options:
   streams: []
   buffer: 1000
