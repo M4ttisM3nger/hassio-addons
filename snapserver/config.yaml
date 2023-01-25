@@ -29,11 +29,11 @@ schema:
   streams: str
   buffer: int
   codec: str
-  send_to_muted: str
+  send_to_muted: bool
   sampleformat: str
-  http_enabled: str
-  tcp_enabled: str
-  logging_enabled: str
+  http_enabled: bool
+  tcp_enabled: bool
+  logging_enabled: bool
   server_threads: int
   server_datadir: str
   stream_bis: str?
