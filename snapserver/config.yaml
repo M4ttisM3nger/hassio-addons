@@ -1,6 +1,6 @@
 ---
 name: snapcast-server
-version: dev
+version: 0.01
 slug: snapcastserver
 description: Create a snapcast server
 url: https://github.com/Art-Ev/addon-snapserver
