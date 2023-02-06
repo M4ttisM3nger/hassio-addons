@@ -12,8 +12,7 @@ arch:
   - i386
 host_network: true
 map: 
- - share: rw
- - config: rw
+  - config:rw
 audio: true
 stdin: true
 init: false
