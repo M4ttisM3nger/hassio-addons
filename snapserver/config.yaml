@@ -11,8 +11,7 @@ arch:
   - armv7
   - i386
 host_network: true
-map: 
-  - config:rw
+map: ["config:rw"]
 audio: true
 stdin: true
 init: false
