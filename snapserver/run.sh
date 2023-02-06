@@ -50,7 +50,7 @@ bashio::log.info "Populating snapserver.conf..."
 
     echo "[http]"
     echo "enabled = ${http}"
-    echo "bind_to_address = 0:0:0:0"
+    echo "bind_to_address = 127:0:0:1"
     echo "doc_root = ${datadir}"
     
     echo "[tcp]"
