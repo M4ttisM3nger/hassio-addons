@@ -28,7 +28,7 @@ options:
   tcp_enabled: true
   logging_enabled: true
   server_threads: -1
-  server_datadir: /config/snapserver
+  server_datadir: /usr/share/snapserver/snapweb
 schema:
   streams:
     - str
